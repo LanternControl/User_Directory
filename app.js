@@ -5,11 +5,13 @@ const data = require('./data.js');
 
 const app = express();
 
+
 app.engine('mustache', mustache());
 app.set('views', './views');
 app.set('view engine', 'mustache');
 
-// app.use('/User_Directory', express.static('User_Directory'));
+app.use(express.static(path.join(__dirname, '/views')));
+app.use(express.static(__dirname + '/views'));
 
 app.get('/users', function(req, res){
  res.render('users', data)
