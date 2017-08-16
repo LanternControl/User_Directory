@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Robuts</title>
+</head>
+
+<body>
+  <div id='wrapper'>
+    <h3>Index</h3>
+  <div id='box'>
+    {{#users}}
+      <img src="{{avatar}}"/>
+      {{name}}
+      {{job}}
+      {{^job}}
+        Available for hire
+      {{/job}}
+    {{/users}}
+  </div>
+  </div>
+</body>
+
+</html>
