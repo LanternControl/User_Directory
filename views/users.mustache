@@ -2,22 +2,26 @@
 <html>
 <head>
 <title>Robuts</title>
-<link rel="stylesheet" type="text/css" href="views/main.css" />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" type="text/css" href="/main.css" />
+
 </head>
 
 <body>
+  <h3>Index</h3>
   <div id='wrapper'>
-    <h3>Index</h3>
-  <div id='box'>
     {{#users}}
+    <div id='box'>
       <img src="{{avatar}}"/>
       {{name}}
       {{job}}
       {{^job}}
-        Available for hire
+      <div class='hire'>
+        <p>Available for hire</p>
+      </div>
       {{/job}}
+    </div>
     {{/users}}
-  </div>
   </div>
 </body>
 
